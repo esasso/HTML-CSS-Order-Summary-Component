@@ -1,0 +1,204 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+html {
+    font-family: 'Red Hat Display', sans-serif;
+    box-sizing: border-box; 
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--pale-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+button {
+    font-family: inherit;
+    border: none;
+}
+
+.bg-image {
+    background: url(./images/pattern-background-mobile.svg) no-repeat center/cover;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+img {
+    max-width: 100%;
+}
+
+.pricing-panel{
+    background-color: white;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 18px 30px -12px hsl(224, 23%, 55%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-image {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 25px;
+    margin: 25px;
+    text-align: center;
+    color: var(--dark-blue);
+}
+
+h4 {
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.price {
+    color: var(--desaturated-blue);
+    font-size: 14px;
+}
+
+.summary {
+    color: var(--desaturated-blue);
+    text-align: center;
+    margin: 0px 40px 0px 40px;
+    line-height: 1.5em;
+}
+
+.annual-plan {
+    background-color: var(--very-pale-blue);
+    border-radius: 10px;
+    margin: 25px 30px 10px;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.change {
+    background-color: var(--very-pale-blue);
+    text-decoration: underline;
+    font-weight: 900;
+    color: var(--bright-blue);
+}
+
+.change:hover {
+    color: var(--dark-blue);
+    cursor: pointer;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;    
+}
+.primary {
+    background-color: var(--bright-blue);
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 15px 15px;
+    box-shadow: 0px 3px 40px -15px var(--bright-blue);
+    margin: 20px 30px 30px;
+}
+
+.primary:hover {
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+
+.secondary {
+    background-color: white;
+    margin-bottom: 30px;
+    color: var(--desaturated-blue);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.secondary:hover {
+    color: var(--dark-blue);
+    cursor: pointer;
+}
+
+.attribution { 
+    margin: 15px;
+    font-size: 11px; text-align: center;
+}
+ 
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 376px) {
+    .bg-image {
+        background: url(./images/pattern-background-desktop.svg) no-repeat center/cover;
+        height: 50vh;
+    }
+}
